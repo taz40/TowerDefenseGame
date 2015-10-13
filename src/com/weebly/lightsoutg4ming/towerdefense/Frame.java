@@ -9,16 +9,15 @@ public class Frame extends JFrame {
 	}
 	
 	public Frame(){
-		setSize(800,600);
 		setTitle("Tower Defense!");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setExtendedState(MAXIMIZED_BOTH);
+		setUndecorated(true);
 		setResizable(false);
 		setVisible(true);
-		setLocationRelativeTo(null);
 		
-		while(true){
-			
-		}
+		Screen screen = new Screen(this);
+		add(screen);
 	}
 	
 }
